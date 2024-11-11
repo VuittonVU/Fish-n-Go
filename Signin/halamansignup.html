@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="halamansignin.css">
+      <link rel="stylesheet" href="bubble/style.css">
+      <title>Halamansignin</title>
+      <script>
+        // Check if 'signup=success' is in the URL and display a success message
+        window.onload = function() {
+          const urlParams = new URLSearchParams(window.location.search);
+          if (urlParams.has('signup') && urlParams.get('signup') === 'success') {
+            alert('Registration successful!');
+          }
+        }
+      </script>
+  </head>
+  <body>
+
+    <a href="../index.html">
+      <button class="back-button"><b>></b></button>
+    </a>
+
+    <div class="login-container">
+      <form action="signup.php" method="post">
+        <div class="form-item">
+          <label>Username</label>
+          <div class="input-wrapper">
+            <input type="text" name="username" id="username" autocomplete="off" required />
+          </div>
+        </div>
+      
+        <div class="form-item">
+          <label>Password</label>
+          <div class="input-wrapper">
+            <input type="password" name="password" id="password" autocomplete="off" required />
+          </div>
+        </div>
+      
+        <div class="form-item">
+          <label>Confirm Password</label>
+          <div class="input-wrapper">
+            <input type="password" name="confirm_password" id="confirm_password" autocomplete="off" required />
+          </div>
+        </div>
+      
+        <button type="submit" id="submit">Sign Up</button>
+        <a href="halamansignin.html" class="signuplink">already have an account?</a>
+      </form>
+    
+    <audio id="click-sound" src="/BGM/mouse.mp3" preload="auto"></audio>
+    <script src="../BGM/Clicksfx.js"></script>
+    <script src="halamansignin.js"></script>
+    <script src="bubble/script.js"></script>
+  </body>
+</html>
